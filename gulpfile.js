@@ -46,6 +46,16 @@ gulp.task('exportFonts', () => {
 
 gulp.task('build', gulp.parallel('minify', 'exportFonts'));
 
+gulp.task('startBuild', () => {
+  browserSync.init({
+    server: {
+      baseDir: "./build"
+    }
+  });
+
+  browserSync.watch("./build", browserSync.reload);
+});
+
 gulp.task('startServer', () => {
   browserSync.init({
     server: {

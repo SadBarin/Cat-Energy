@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+
 $font-black: #111111
 $font-gray:  #444444
 $gray:       #f2f2f2
 $green:      #68b738
 $gap:          40px
+$font-title:   'Oswald', sans-serif
+$font-text:    'Arial', sans-serif
 
 \:root 
   box-sizing: border-box
@@ -15,7 +19,11 @@ $gap:          40px
 a 
   text-decoration: none
 
+a:visited 
+  color: $font-black
+
 ul
+  margin: 0
   padding: 0
 
 li 
@@ -27,26 +35,36 @@ body
   color: $font-gray
   font-size: 16px
 
+  margin: 0
+
 .title
   color: $font-black
+  font-family: $font-title
   font-size: 60px
   font-weight: normal
   line-height: 60px
 
+  margin: 0
+
 .subtitle
   color: $font-black
+  font-family: $font-title
   font-size: 36px
   font-weight: normal
   line-height: 36px
 
+  margin: 0
+
 .text
   color: $font-gray
+  font-family: $font-text
   font-size: 16px
   font-weight: normal
   line-height: 24px
 
 .text-bold
   color: $font-black
+  font-family: $font-title
   font-size: 20px
   font-weight: normal
   line-height: 20px
@@ -54,6 +72,45 @@ body
 
 .flex
   display: flex
+
+.container
+  max-width: 1220px
+  min-width: 280px
+  margin: 0 auto
+  padding: 0px $gap
+
+.header
+  padding-top: 50px
+
+.header__nav
+  justify-content: space-between
+  align-items: center
+
+.logo
+  max-width: 170px
+
+  align-items: center
+
+.logo__name
+  color: $font-black
+  font-family: $font-title
+  font-size: 20px
+  font-weight: 400
+  line-height: 20px
+  text-transform: uppercase
+
+  margin: 0
+  margin-top: 7px
+
+  span
+    font-weight: 500
+
+.header__list
+  width: 480px
+  margin-top: 7px
+
+.header__list .header__list-item:not(:last-child)
+  margin-right: 35px
 
 .button
   background: $green
@@ -68,4 +125,9 @@ body
 
   cursor: pointer
 
+.footer
+  background: $gray
 
+  padding: 62px 0px
+
+  justify-content: space-between

@@ -1,5 +1,123 @@
 @import "global"
 
-//Code
+/*Header*/
+
+.header__nav
+  margin-bottom: 110px
+
+.header__content-title
+  margin-bottom: 46px
+
+.header__content-text
+  margin-bottom: 56px
+
+.header__content-botton
+  margin-bottom: 186px
+
+/*Main*/
+
+.main__programs
+  justify-content: space-between
+
+  margin-bottom: 80px
+
+  flex-wrap: wrap
+
+.programs__item
+  background: $gray
+
+  padding: 50px 60px
+
+.programs__slim
+  width: calc(50% - #{$gap})
+
+.programs__pro
+  width: calc(50% - #{$gap})
+
+.programs__subtitle
+  text-align: center
+
+  margin-bottom: 80px
+
+.programs__text
+  margin-bottom: 40px
+
+.programs__text-bold
+  &::after
+    content: ""
+
+    background: url(../img/arrow.svg)
+
+    width: 24px
+    height: 11px
+
+    display: inline-block
+
+    position: relative
+    top: -2px
+    left: 22px
+
+.main__advantages
+  flex-direction: column
+
+  margin-bottom: 86px
+
+.advantages__title
+  margin-bottom: 70px
+
+.advantages__content
+  flex-wrap: wrap
+  justify-content: space-between
+
+.advantages__item
+  height: 230px
+
+  justify-content: start
+  align-items: center
+
+  position: relative
+
+  &::after
+    content: ""
+
+    background: url(../img/advantage-1.png)
+
+    width: 80px
+    height: 80px
+
+    display: inline-block
+
+    position: absolute
+    left: 0
+    top: 0
+
+.advantages__item--2
+  &::after
+    background: url(../img/advantage-2.png)
+
+.advantages__item--3
+  &::after
+    background: url(../img/advantage-3.png)
+
+.advantages__item--4
+  &::after
+    background: url(../img/advantage-4.png)
+
+.advantages__text
+  margin-top: 116px
+
+.main__example
+  flex-direction: column
+
+.title__example
+  margin-bottom: 78px
+
+.examlple__content
+  background: $gray
+
+  padding: 76px 0
+
+.examlple__info
+  width: 38%
 
 @import "media"

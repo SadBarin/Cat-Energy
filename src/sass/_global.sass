@@ -67,24 +67,60 @@ body
   font-family: $font-title
   font-size: 20px
   font-weight: normal
-  line-height: 20px
+  line-height: 28px
   text-transform: uppercase
+
+.text-bold--white:visited
+  color: #fff
+
+.text-bold--white-active::after
+  content: ""
+
+  background: #fff
+
+  height: 2px
+  width: 100%
+  margin-top: 10px
+
+  display: block
+
+.text-bold--active::after
+  content: ""
+
+  background: $green
+
+  height: 2px
+  width: 100%
+  margin-top: 10px
+
+  display: block
 
 .flex
   display: flex
 
 .container
-  max-width: 1220px
+  max-width: 1300px
   min-width: 280px
   margin: 0 auto
   padding: 0px $gap
 
-.header
+.header__container
   padding-top: 50px
+  margin-bottom: 80px
 
 .header__nav
   justify-content: space-between
   align-items: center
+
+.header__text-bold:hover
+  opacity: 0.7
+
+  transition: .2s ease-in
+
+.header__text-bold:active, .header__text-bold:focus
+  opacity: 0.5
+
+  transition: .2s ease-in
 
 .logo
   max-width: 170px
@@ -104,6 +140,16 @@ body
 
   span
     font-weight: 500
+
+.logo:hover
+  opacity: 0.7
+
+  transition: .2s ease-in
+
+.logo:active, .logo:focus
+  opacity: 0.5
+
+  transition: .2s ease-in
 
 .header__list
   width: 480px
@@ -125,9 +171,72 @@ body
 
   cursor: pointer
 
+.button:hover
+  background: #5Eaa2f
+
+  transition: .2s ease-in
+
+.button:active, .button:focus
+  color: rgba(255, 255, 255, 0.5)
+
+  transition: .2s ease-in
+
+.main__map
+  background: $gray
+
+.main__map-container
+  position: relative
+
+.map__address
+  background: #fff
+
+  border: 2px solid $gray
+
+  padding: 60px 70px
+
+  position: absolute
+  top: 108px
+  left: 120px
+
+  z-index: 2
+
+.address__text-bold
+  margin: 0
+
+.map__address-right
+  margin-left: 80px
+
+  flex-direction: column
+  justify-content: space-between
+
+.address__text
+  margin: 0
+
 .footer
   background: $gray
 
-  padding: 62px 0px
+.footer__container
+  padding: 62px 40px
 
   justify-content: space-between
+  align-items: center
+
+.footer__social .footer__social-item:not(:last-child)
+  margin-right: 28px
+
+.footer__social-item:hover
+  opacity: 0.7
+
+  transition: .2s ease-in
+
+.footer__social-item:active, .footer__social-item:focus
+  opacity: 0.5
+
+  transition: .2s ease-in
+
+.footer__author
+  align-items: center
+
+.footer__author-text
+  margin-right: 22px
+

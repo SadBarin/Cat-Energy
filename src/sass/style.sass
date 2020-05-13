@@ -1,9 +1,33 @@
 @import "global"
 
 /*Header*/
+.header__container
+  padding-bottom: 186px
+
+  position: relative
+
+.header--bg::before
+  content: ""
+
+  background: url(../img/header-background.jpg) no-repeat
+  background-position-x: right
+
+  width: 720px
+  height: 696px
+
+  display: block
+
+  position: absolute
+  top: -50px
+  right: -80px
+
+  z-index: -1
 
 .header__nav
   margin-bottom: 110px
+
+.header__content
+  padding-left: 80px
 
 .header__content-title
   margin-bottom: 46px
@@ -11,12 +35,9 @@
 .header__content-text
   margin-bottom: 56px
 
-.header__content-botton
-  margin-bottom: 186px
-
 /*Main*/
 
-.main__programs
+.programs__container
   justify-content: space-between
 
   margin-bottom: 80px
@@ -28,11 +49,37 @@
 
   padding: 50px 60px
 
+  position: relative
+
+  &::after
+    content: ""
+
+    background: url(../img/cat-slim.png) no-repeat
+
+    height: 106px
+    width: 100px
+
+    display: block
+
+    position: absolute
+    top: 25px
+    left: 60px
+
 .programs__slim
   width: calc(50% - #{$gap})
 
 .programs__pro
   width: calc(50% - #{$gap})
+
+  &::after
+    background: url(../img/cat-pro.png) no-repeat
+
+    height: 106px
+    width: 134px
+
+    position: absolute
+    top: 30px
+    left: 30px
 
 .programs__subtitle
   text-align: center
@@ -43,10 +90,13 @@
   margin-bottom: 40px
 
 .programs__text-bold
+  transition-delay: .5s
+
   &::after
     content: ""
 
-    background: url(../img/arrow.svg)
+    background: url(../img/arrow.svg) no-repeat
+    background-size: cover
 
     width: 24px
     height: 11px
@@ -57,7 +107,19 @@
     top: -2px
     left: 22px
 
-.main__advantages
+.programs__text-bold:hover
+  &::after
+    background: url(../img/arrow-big.svg) no-repeat
+    background-size: cover
+
+    width: 32px
+
+.programs__text-bold:active, .programs__text-bold:focus
+  opacity: 0.5
+  
+  transition: .2s ease-in
+
+.advantages__container
   flex-direction: column
 
   margin-bottom: 86px
@@ -91,22 +153,47 @@
     left: 0
     top: 0
 
+  &::before
+    content: ""
+
+    background: url(../img/advantages-number-1.png) no-repeat
+
+    width: 115px
+    height: 240px
+
+    display: inline-block
+
+    position: absolute
+    right: -30px
+    top: 0
+
+    z-index: -1
+
 .advantages__item--2
   &::after
     background: url(../img/advantage-2.png)
+
+  &::before
+    background: url(../img/advantages-number-2.png) no-repeat
 
 .advantages__item--3
   &::after
     background: url(../img/advantage-3.png)
 
+  &::before
+    background: url(../img/advantages-number-3.png) no-repeat
+
 .advantages__item--4
   &::after
     background: url(../img/advantage-4.png)
 
+  &::before
+    background: url(../img/advantages-number-4.png) no-repeat
+
 .advantages__text
   margin-top: 116px
 
-.main__example
+.example__container
   flex-direction: column
 
 .title__example
@@ -115,7 +202,7 @@
 .examlple__content
   background: $gray
 
-  padding: 76px 0
+  padding: 76px 0px
 
 .examlple__info
   width: 38%

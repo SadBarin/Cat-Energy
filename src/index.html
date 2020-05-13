@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="preloader" id="page-preloader">
+    <div class="loader"></div>
+  </div>
+
   <header class="header">
+    <div class="container header__container header--bg">
     <nav class="header__nav flex">
       <a href="index.html" class="logo flex">
         <img src="img/logo.svg" alt="cat" width="70px" height="60px" class="logo__image">
@@ -18,14 +22,14 @@
       </a>
 
       <ul class="header__list flex">
-          <li class="header__list-item text-bold text-bold--white">
-            <a href="#">Главная</a>
+          <li class="header__list-item">
+            <a href="index.html" class="text-bold text-bold--white header__text-bold text-bold--white-active">Главная</a>
           </li>
-          <li class="header__list-item text-bold text-bold--white">
-            <a href="#">Каталог Продукции</a>
+          <li class="header__list-item">
+            <a href="catalog.html" class="text-bold header__text-bold text-bold--white">Каталог Продукции</a>
           </li>
-          <li class="header__list-item text-bold text-bold--white">
-            <a href="#">Подбор программы</a>
+          <li class="header__list-item">
+            <a href="programs.html" class="text-bold header__text-bold text-bold--white">Подбор программы</a>
           </li>
       </ul>
     </nav>
@@ -40,10 +44,12 @@
 
       <button class="button flex text-bold header__content-botton">Подобрать программу</button>
     </section>
+  </div>
   </header>
 
   <main class="main">
-    <section class="main__programs programs flex">
+    <section class="main__programs programs">
+      <div class="container programs__container flex">
       <div class="programs__item programs__slim">
         <h3 class="subtitle programs__subtitle">Похудение</h3>
         <p class="text programs__text">
@@ -55,7 +61,7 @@
       </div>
 
       <div class="programs__item programs__pro">
-        <h3 class="subtitle programs__subtitle">Набор массы</h3>
+        <h3 class="subtitle programs__subtitle programs__subtitle-slim">Набор массы</h3>
         <p class="text programs__text">
           Заработать авторитет среди дворовых котов и даже собак?
           Серия Cat Energy Pro поможет вашему коту нарастить
@@ -63,9 +69,11 @@
         </p>
         <a href="#" class="text-bold programs__text-bold">Каталог PRO</a>
       </div>
+    </div>
     </section>
 
-    <section class="main__advantages flex">
+    <section class="main__advantages">
+    <div class="container advantages__container flex">
       <h2 class="title advantages__title">Как это работает</h2>
 
       <div class="advantages__content flex">
@@ -101,9 +109,11 @@
           </p>
         </div>
       </div>
+    </div>
     </section>
 
-    <section class="main__example flex">
+    <!-- <section class="main__example">
+    <div class="container example__container flex">
       <h2 class="title title__example">Живой пример</h2>
 
       <div class="examlple__content">
@@ -120,35 +130,62 @@
 
         <div class="example__cat"></div>
       </div>
-    </section>
+    </section> -->
 
     <section class="main__map">
-      <div class="map__address"></div>
+      <div class="container main__map-container">
+        <div class="map__address flex">
+          <div class="map__address-left">
+            <p class="text-bold address__text-bold">
+              приглашаем <br>
+              к сотрудничеству <br>
+              дилеров!
+            </p>
+          </div>
+
+          <div class="map__address-right flex">
+            <p class="text address__text">
+              ул. Большая <br>
+              Конюшенная, д. 19/8 
+            </p>
+            <p class="text address__text">
+              Санкт-Петербург
+            </p>
+          </div>
+        </div>
+
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A66ae1cf0f8ef2a7e7c0dd5122e8f89557b424a718f88fb996d6bdc79940fe0ba&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
     </section>
+  </div>
   </main>
 
-  <footer class="footer flex">
+  <footer class="footer">
+  <div class="container footer__container flex">
     <a href="index.html" class="logo">
       <p class="logo__name"><span>Cat</span> energy</p>
     </a>
 
     <div class="footer__social">
-      <a href="https://vk.com/">
+      <a href="https://vk.com/" class="footer__social-item">
         <img src="img/footer-vk.svg" alt="VK" width="30px" height="16px">
       </a>
-      <a href="https://www.facebook.com/">
+
+      <a href="https://www.facebook.com/" class="footer__social-item">
         <img src="img/footer-facebook.svg" alt="Instagram" width="14px" height="28px">
       </a>
-      <a href="https://www.instagram.com/">
+
+      <a href="https://www.instagram.com/" class="footer__social-item">
         <img src="img/footer-instagram.svg" alt="Facebook" width="23px" height="23px">
       </a>
     </div>
 
-    <div class="footer__author">
-      <img src="img/footer-academy.svg" alt="Academy" width="27px" height="34px">
+    <div class="footer__author flex">
+      <p class="text footer__author-text"> Макет: HTML Academy <br> Верстальщик: SadBarin</p>
     </div>
-  </footer>
-  <script src="script.js"></script>
   </div>
+  </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>

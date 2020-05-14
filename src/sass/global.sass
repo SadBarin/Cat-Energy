@@ -10,6 +10,7 @@ $font-text:    'Arial', sans-serif
 
 \:root 
   box-sizing: border-box
+  height: 100%
 
 *,
 ::after,
@@ -35,6 +36,7 @@ body
   color: $font-gray
   font-size: 16px
 
+  height: 100vh
   margin: 0
 
 .title
@@ -84,6 +86,8 @@ body
 
   display: block
 
+  position: relative
+
 .text-bold--active::after
   content: ""
 
@@ -94,6 +98,8 @@ body
   margin-top: 10px
 
   display: block
+
+  position: relative
 
 .flex
   display: flex
@@ -121,6 +127,9 @@ body
   opacity: 0.5
 
   transition: .2s ease-in
+
+.header__menu
+  display: none
 
 .logo
   max-width: 170px
@@ -153,10 +162,9 @@ body
 
 .header__list
   width: 480px
-  margin-top: 7px
+  margin-top: 20px
 
-.header__list .header__list-item:not(:last-child)
-  margin-right: 35px
+  justify-content: space-between
 
 .button
   background: $green
@@ -240,3 +248,72 @@ body
 .footer__author-text
   margin-right: 22px
 
+@media screen and (max-width:800px)
+  .container
+    padding-left: 30px
+    padding-right: 30px
+
+  .text-bold
+    font-size: 18px
+
+  .header__container
+    padding-top: 45px
+
+  .header__list
+    width: 400px
+
+  .main__map-container
+    padding-left: 0
+    padding-right: 0
+
+  .map__address
+    border: none
+
+    flex-direction: row
+    justify-content: space-between
+
+    position: static
+
+@media screen and (max-width:650px)
+  .header__list
+    display: none
+
+  .header__menu
+    display: block
+
+    cursor: pointer
+
+  .header__menu:hover
+    opacity: 0.6
+
+    transition: .2s ease-in
+
+  .header__menu:active, .header__menu:focus
+    opacity: 0.3
+
+    transition: .2s ease-in
+
+  .footer__container
+    flex-direction: column
+
+  .footer__logo
+    margin-bottom: 30px
+
+  .footer__social
+    border-top: 2px solid #cecece
+    border-bottom: 2px solid #cecece
+
+    padding: 20px 0px
+    margin-bottom: 30px
+
+  .footer__author-text
+    margin: 0
+
+
+
+@media screen and (max-width:320px)
+  .container
+    padding: 0px 20px
+
+  .title
+    font-size: 36px

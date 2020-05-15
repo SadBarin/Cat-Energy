@@ -18,10 +18,9 @@ $font-text:    'Arial', sans-serif
   box-sizing: inherit
 
 a 
-  text-decoration: none
-
-a:visited 
   color: $font-black
+
+  text-decoration: none
 
 ul
   margin: 0
@@ -38,6 +37,8 @@ body
 
   height: 100vh
   margin: 0
+
+  overflow-x: hidden
 
 .title
   color: $font-black
@@ -72,7 +73,9 @@ body
   line-height: 28px
   text-transform: uppercase
 
-.text-bold--white:visited
+  display: inline-block
+
+.text-bold--white
   color: #fff
 
 .text-bold--white-active::after
@@ -129,6 +132,8 @@ body
   transition: .2s ease-in
 
 .header__menu
+  margin-top: 7px
+
   display: none
 
 .logo
@@ -247,73 +252,3 @@ body
 
 .footer__author-text
   margin-right: 22px
-
-@media screen and (max-width:800px)
-  .container
-    padding-left: 30px
-    padding-right: 30px
-
-  .text-bold
-    font-size: 18px
-
-  .header__container
-    padding-top: 45px
-
-  .header__list
-    width: 400px
-
-  .main__map-container
-    padding-left: 0
-    padding-right: 0
-
-  .map__address
-    border: none
-
-    flex-direction: row
-    justify-content: space-between
-
-    position: static
-
-@media screen and (max-width:650px)
-  .header__list
-    display: none
-
-  .header__menu
-    display: block
-
-    cursor: pointer
-
-  .header__menu:hover
-    opacity: 0.6
-
-    transition: .2s ease-in
-
-  .header__menu:active, .header__menu:focus
-    opacity: 0.3
-
-    transition: .2s ease-in
-
-  .footer__container
-    flex-direction: column
-
-  .footer__logo
-    margin-bottom: 30px
-
-  .footer__social
-    border-top: 2px solid #cecece
-    border-bottom: 2px solid #cecece
-
-    padding: 20px 0px
-    margin-bottom: 30px
-
-  .footer__author-text
-    margin: 0
-
-
-
-@media screen and (max-width:320px)
-  .container
-    padding: 0px 20px
-
-  .title
-    font-size: 36px

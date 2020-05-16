@@ -1,0 +1,124 @@
+//Catalog
+
+.container__products
+  margin-bottom: 80px
+
+.products__title
+  margin-bottom: 80px
+
+.products__cards
+  justify-content: space-between
+  flex-wrap: wrap
+
+.card
+  background: $gray
+  
+  margin-top: 84px
+  padding: 165px 32px 40px 32px
+
+  flex-basis: 22%
+  flex-direction: column
+  justify-content: center
+
+  position: relative
+
+  &::after
+    content: ""
+
+    background-image: url(../img/catalog-can-1.png)
+    background-size: contain
+
+    width: 160px
+    height: 170px
+    margin: 0 auto
+
+    display: block
+
+    position: absolute
+    top: -50px
+    left: 0
+    right: 0
+
+.card:nth-child(4n)
+  margin-right: 0
+
+.card:nth-child(-n+4)
+  margin-bottom: 40px
+
+.card--big
+  &::after
+    width: 192px
+    height: 200px
+
+    top: -77px
+
+.card--2
+  &::after
+    background-image: url(../img/catalog-can-2.png)
+
+.card--3
+  &::after
+    background-image: url(../img/catalog-can-3.png)
+
+.card--4
+  &::after
+    background-image: url(../img/catalog-can-4.png)
+
+.card--5
+  &::after
+    background-image: url(../img/catalog-can-5.png)
+
+.card--6
+  &::after
+    background-image: url(../img/catalog-can-6.png)
+
+.card--7
+  &::after
+    background-image: url(../img/catalog-can-7.png)
+
+.card--8
+  &::after
+    background-image: url(../img/catalog-can-7.png)
+
+.card__title
+  text-align: center
+
+  width: 130px
+  margin: 0 auto
+  margin-bottom: 28px
+
+.card__info
+  margin-bottom: 34px
+
+.card__text
+  margin: 0px
+
+  justify-content: space-between
+
+  position: relative
+
+  &::after
+    content: ""
+
+    background: #d7d7d7
+
+    width: 100%
+    height: 1px
+
+    position: absolute
+    left: 0
+    bottom: -10px
+
+.card__text:not(:last-child)
+  margin-bottom: 20px
+
+.card__button
+  font-family: $font-title
+  font-size: 16px
+  line-height: 20px
+  text-transform: uppercase
+
+  padding: 4% 3%
+
+.additionally__title
+  margin-bottom: 76px

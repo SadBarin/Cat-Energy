@@ -142,7 +142,7 @@ body {
   background: #68b738;
   border: none;
   color: #fff;
-  padding: 18px 28px;
+  padding: 1% 3%;
   justify-content: center;
   align-items: center;
   cursor: pointer; }
@@ -427,6 +427,104 @@ body {
 .example-text-bold__span {
   margin-left: 80px; }
 
+.container__products {
+  margin-bottom: 80px; }
+
+.products__title {
+  margin-bottom: 80px; }
+
+.products__cards {
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.card {
+  background: #f2f2f2;
+  margin-top: 84px;
+  padding: 165px 32px 40px 32px;
+  flex-basis: 22%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; }
+  .card::after {
+    content: "";
+    background-image: url(../img/catalog-can-1.png);
+    background-size: contain;
+    width: 160px;
+    height: 170px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0; }
+
+.card:nth-child(4n) {
+  margin-right: 0; }
+
+.card:nth-child(-n+4) {
+  margin-bottom: 40px; }
+
+.card--big::after {
+  width: 192px;
+  height: 200px;
+  top: -77px; }
+
+.card--2::after {
+  background-image: url(../img/catalog-can-2.png); }
+
+.card--3::after {
+  background-image: url(../img/catalog-can-3.png); }
+
+.card--4::after {
+  background-image: url(../img/catalog-can-4.png); }
+
+.card--5::after {
+  background-image: url(../img/catalog-can-5.png); }
+
+.card--6::after {
+  background-image: url(../img/catalog-can-6.png); }
+
+.card--7::after {
+  background-image: url(../img/catalog-can-7.png); }
+
+.card--8::after {
+  background-image: url(../img/catalog-can-7.png); }
+
+.card__title {
+  text-align: center;
+  width: 130px;
+  margin: 0 auto;
+  margin-bottom: 28px; }
+
+.card__info {
+  margin-bottom: 34px; }
+
+.card__text {
+  margin: 0px;
+  justify-content: space-between;
+  position: relative; }
+  .card__text::after {
+    content: "";
+    background: #d7d7d7;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -10px; }
+
+.card__text:not(:last-child) {
+  margin-bottom: 20px; }
+
+.card__button {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 4% 3%; }
+
+.additionally__title {
+  margin-bottom: 76px; }
+
 @media screen and (max-width: 1150px) {
   .header--index {
     padding-bottom: 400px; }
@@ -479,7 +577,15 @@ body {
   .advantages__content {
     margin-right: 86px; }
   .advantages__item--1, .advantages__item--2 {
-    margin-bottom: 130px; } }
+    margin-bottom: 130px; }
+  .products__cards::after {
+    content: "";
+    flex-basis: 30%; }
+  .card {
+    margin-right: 0;
+    flex-basis: 30%; }
+  .card:nth-child(-n+6) {
+    margin-bottom: 40px; } }
 
 @media screen and (max-width: 850px) {
   .container {
@@ -502,7 +608,11 @@ body {
     border: none;
     flex-direction: row;
     justify-content: space-between;
-    position: static; } }
+    position: static; }
+  .products__cards::after {
+    display: none; }
+  .card {
+    flex-basis: 47%; } }
 
 @media screen and (max-width: 660px) {
   .subtitle {
@@ -628,7 +738,49 @@ body {
     padding-left: 0;
     padding-right: 0; }
   .map__address-right {
-    margin-left: 5px; } }
+    margin-left: 5px; }
+  .main__products {
+    margin-bottom: 26px; }
+  .card {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    flex-basis: 100%; }
+    .card::after {
+      background-repeat: no-repeat;
+      width: 29%;
+      height: 40%;
+      margin: initial;
+      top: 40px;
+      left: 0; }
+  .card:not(:last-child) {
+    margin-bottom: 50px; }
+    .card:not(:last-child)::before {
+      content: "";
+      background: #d7d7d7;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: -25px; }
+  .card--big::after {
+    width: 34%;
+    height: 45%; }
+  .card__title {
+    text-align: left;
+    margin-left: 36%;
+    margin-bottom: 18px;
+    width: 100px; }
+  .card__info {
+    margin-left: 36%; }
+  .card:nth-child(-n+6) {
+    margin-bottom: 40px; }
+  .card__info {
+    margin-bottom: 24px; }
+  .card__text:not(:last-child) {
+    margin-bottom: 6px; }
+  .card__text::after {
+    display: none; } }
 
 @media screen and (max-width: 430px) {
   .advantages__container {

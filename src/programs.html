@@ -35,10 +35,104 @@
   </header>
 
   <main class="main">
-    <section class="main__programs">
-      <h2 class="title">Подбор программы</h2>
+    <section class="programs__profile">
+      <div class="container">
+        <h2 class="title profile__title">Подбор программы</h2>
+
+        <p class="text-bold profile__text-bold">
+          Заполните анкету и мы подберем <br>
+          программу питания для вашего кота
+        </p>
+
+        <form class="profile__form flex">
+          <div class="profile__form-left flex">
+            <label for="cat-name" class="text-bold profile__form-label">Имя:
+              <input type="text" placeholder="Барсик" name="cat-name" id="cat-name" class="programs-input profile__form-input">
+            </label>
+
+            <label for="cat-weight" class="text-bold profile__form-label">Вес (КГ):
+              <input type="text" placeholder="7" name="cat-weight" id="cat-weight" class="programs-input profile__form-input">
+            </label>
+
+            <label for="cat-age" class="text-bold profile__form-label">Возраст (ЛЕТ):
+              <input type="text" placeholder="7" name="cat-age" id="cat-age" class="programs-input profile__form-input">
+            </label>
+          </div>
+
+          <div class="profile__form-right flex">
+            <label for="input-slim" class="text-bold">
+              <input type="radio" name="radio-programs" id="input-slim">
+              Похудение
+            </label>
+
+            <label for="input-pro" class="text-bold">
+              <input type="radio" name="radio-programs" id="input-pro">
+              Набор массы
+            </label>
+
+            <label for="input-unknown" class="text-bold">
+              <input type="radio" name="radio-programs" id="input-unknown">
+              Не знаю (нужен ваш совет)
+            </label>
+          </div>
+        </form>
+      </div>
     </section>
 
+    <section class="programs__contacts">
+      <div class="container">
+        <h2 class="subtitle contacts__title">Контактные данные (владельца кота)</h2>
+
+        <form class="contacts__form flex">
+          <label for="e-mail" class="text-bold contacts__form-label">E-mail:
+            <input type="text" placeholder="kuklachev@gmail.com" name="e-mail" id="e-mail" class="programs-input contacts__form-input">
+          </label>
+
+          <label for="phone" class="text-bold contacts__form-label">Телефон:
+            <input type="text" placeholder="8 (960) 900-60-90" name="phone" id="phone" class="programs-input contacts__form-input">
+          </label>
+        </form>
+      </section>
+    </section>
+
+    <section class="programs__сomments">
+      <div class="container">
+        <h2 class="subtitle сomments__title">Комментарии</h2>
+
+        <form class="сomments__form">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота" class="сomments__form-textarea"></textarea>
+        </form>
+      </div>
+    </section>
+
+    <section class="programs__extra">
+      <div class="container">
+        <h2 class="subtitle extra__title">Дополнительно</h2>
+
+        <form class="extra__form flex">
+          <label for="sweetener" class="text-bold">
+            <input type="checkbox" name="sweetener" id="sweetener">
+            Сахарозаменитель
+          </label>
+
+          <label for="water" class="text-bold">
+            <input type="checkbox" name="water" id="water">
+            Питьевая вода
+          </label>
+
+          <label for="milk" class="text-bold">
+            <input type="checkbox" name="milk" id="milk">
+            Молоко
+          </label>
+
+          <label for="vitamins" class="text-bold">
+            <input type="checkbox" name="vitamins" id="vitamins">
+            Витамины
+          </label>
+        </form>
+      </div>
+    </section>
+      
     <section class="main__map">
       <div class="container main__map-container">
         <div class="map__address flex">
@@ -64,6 +158,7 @@
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A66ae1cf0f8ef2a7e7c0dd5122e8f89557b424a718f88fb996d6bdc79940fe0ba&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </section>
+    </div>
   </main>
 
   <footer class="footer">

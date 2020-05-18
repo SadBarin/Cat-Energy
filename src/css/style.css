@@ -143,7 +143,12 @@ body {
   background: #68b738;
   border: none;
   color: #fff;
-  padding: 1% 3%;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  height: 40px;
+  padding: 0 6%;
   justify-content: center;
   align-items: center;
   cursor: pointer; }
@@ -516,14 +521,6 @@ body {
 .card__text:not(:last-child) {
   margin-bottom: 20px; }
 
-.additionally__button {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  height: 40px;
-  padding: 0 8%; }
-
 .main__additionally {
   margin-bottom: 86px; }
 
@@ -565,18 +562,16 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-weight: normal;
-  line-height: 28px;
   text-transform: uppercase;
   height: 125%;
-  padding-left: 9px;
-  padding-right: 9px; }
+  padding-left: 12px;
+  padding-right: 12px; }
 
 .programs-input::placeholder {
   color: #444444;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-weight: normal;
-  line-height: 28px;
   text-transform: uppercase; }
 
 .programs__profile {
@@ -608,6 +603,41 @@ body {
 
 .profile__form-right {
   flex-direction: column; }
+
+.profile__label-radio:not(:last-child) {
+  margin-bottom: 34px; }
+
+.profile__radio {
+  opacity: 0;
+  margin: 10px 0 0 20px;
+  position: absolute;
+  z-index: -1; }
+
+.profile__label-radio {
+  user-select: none; }
+
+.profile__radio + .profile__label-radio {
+  padding: 0 0 0 40px;
+  position: relative;
+  cursor: pointer; }
+
+.profile__radio + .profile__label-radio:before {
+  content: '';
+  background: url(../svg/logo.svg) no-repeat;
+  opacity: 0.6;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  transition: 0.2s; }
+
+.profile__radio:checked + .profile__label-radio:before {
+  background: url(../svg/checkbox-on.svg) no-repeat;
+  width: 27px; }
+
+.profile__radio:focus + .profile__label-radio:before {
+  opacity: 1; }
 
 .programs__contacts {
   margin-bottom: 80px; }
@@ -658,7 +688,14 @@ body {
   margin-bottom: 72px; }
 
 .extra__form {
+  margin-bottom: 70px;
   justify-content: space-between; }
+
+.extra__checkbox {
+  margin-right: 20px; }
+
+.extra__button {
+  width: 46.6%; }
 
 @media screen and (max-width: 1150px) {
   .header--index {

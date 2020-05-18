@@ -5,19 +5,17 @@
   font-family: $font-title
   font-size: 20px
   font-weight: normal
-  line-height: 28px
   text-transform: uppercase
 
   height: 125%
-  padding-left: 9px
-  padding-right: 9px
+  padding-left: 12px
+  padding-right: 12px
 
 .programs-input::placeholder
   color: #444444
   font-family: $font-title
   font-size: 20px
   font-weight: normal
-  line-height: 28px
   text-transform: uppercase
 
 .programs__profile
@@ -50,6 +48,48 @@
 
 .profile__form-right
   flex-direction: column
+
+.profile__label-radio:not(:last-child)
+  margin-bottom: 34px
+
+.profile__radio
+  opacity: 0
+
+  margin: 10px 0 0 20px
+
+  position: absolute
+  z-index: -1
+
+.profile__label-radio
+  user-select: none
+
+.profile__radio + .profile__label-radio
+  padding: 0 0 0 40px
+
+  position: relative
+  cursor: pointer
+
+
+.profile__radio + .profile__label-radio:before 
+  content: ''
+  background: url(../svg/logo.svg) no-repeat
+  opacity: 0.6
+
+  width: 23px
+  height: 23px
+
+  position: absolute
+  top: -4px
+  left: 0
+  
+  transition: 0.2s
+
+.profile__radio:checked + .profile__label-radio:before 
+  background: url(../svg/checkbox-on.svg) no-repeat
+  width: 27px
+
+.profile__radio:focus + .profile__label-radio:before 
+	opacity: 1
 
 .programs__contacts
   margin-bottom: 80px
@@ -103,4 +143,12 @@
   margin-bottom: 72px
 
 .extra__form
+  margin-bottom: 70px
+  
   justify-content: space-between
+
+.extra__checkbox
+  margin-right: 20px
+
+.extra__button
+  width: 46.6%

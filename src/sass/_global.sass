@@ -12,6 +12,10 @@ $font-text:    'Arial', sans-serif
   box-sizing: border-box
   height: 100%
 
+::selection
+  background: $green
+  color: #fff
+
 *,
 ::after,
 ::before 
@@ -49,6 +53,37 @@ body
 
   margin: 0
 
+.title--green-line
+  position: relative
+  
+  display: inline-flex
+  align-items: center
+
+  &::before
+    content: ''
+
+    background: $green
+
+    width: 120px
+    height: 3px
+
+    display: block
+
+    position: absolute
+    left: -160px
+
+  &::after
+    content: ''
+
+    background: $green
+
+    width: 1150px
+    height: 3px
+
+    display: block
+
+    position: absolute
+    left: calc(100% + 40px)
 .subtitle
   color: $font-black
   font-family: $font-title

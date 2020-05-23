@@ -7,9 +7,11 @@
   font-weight: normal
   text-transform: uppercase
 
-  height: 125%
+  height: 50px
   padding-left: 12px
   padding-right: 12px
+
+  position: relative
 
 .programs-input::placeholder
   color: #444444
@@ -39,15 +41,23 @@
 .profile__form-label
   width: 100%
 
+  align-items: center
+
 .profile__form-label:not(:last-child)
   margin-bottom: 20px
 
 .profile__form-input
-  width: 50%
+  width: 70%
   margin-left: 20px
 
 .profile__form-right
+  border: 1px solid #E6E6E6
+
+  width: 45%
+  padding-left: 70px
+
   flex-direction: column
+  justify-content: center
 
 .profile__radio-container:not(:last-child)
   margin-bottom: 34px
@@ -70,7 +80,7 @@
   cursor: pointer
 
 
-.profile__radio + .profile__label-radio:before 
+.profile__radio + .profile__label-radio::before 
   content: ''
   border: 1px solid #CECECE
   border-radius: 30px
@@ -82,8 +92,8 @@
   top: -4px
   left: -40px
 
-.profile__radio:focus + .profile__label-radio:before,
-.profile__radio:checked + .profile__label-radio:before
+.profile__radio:focus + .profile__label-radio::before,
+.profile__radio:checked + .profile__label-radio::before
   content: ''
   background: url(../img/radio.png) center center no-repeat
 
@@ -97,11 +107,27 @@
   justify-content: space-between
 
 .contacts__form-label
-  width: 50%
+  width: 45%
+
+  position: relative
+
+  align-items: center
 
 .contacts__form-input
-  width: 65%
+  width: 100%
   margin-left: 20px
+
+.contacts-label-email
+  position: absolute
+
+  right: 20px
+  top: 19px
+
+.contacts-label-phone
+  position: absolute
+
+  right: 18px
+  top: 17px
 
 .programs__сomments
   margin-bottom: 80px
@@ -142,6 +168,7 @@
   margin-bottom: 70px
   
   justify-content: space-between
+  flex-wrap: wrap
 
 .extra__checkbox
   opacity: 0
@@ -161,7 +188,7 @@
   cursor: pointer
 
 
-.extra__checkbox + .extra__checkbox-label:before 
+.extra__checkbox + .extra__checkbox-label::before 
   content: ''
   border: 1px solid #CECECE
 
@@ -172,9 +199,15 @@
   top: -6px
   left: 0px
 
-.extra__checkbox:checked + .extra__checkbox-label:before
+.extra__checkbox:checked + .extra__checkbox-label::before
   content: ''
   background: url(../img/tick.png) center center no-repeat
 
+.extra__bottom
+  align-items: center
+
 .extra__button
-  width: 46.6%
+  width: 49.5%
+
+.extra__bottom-text
+  margin-left: 12%

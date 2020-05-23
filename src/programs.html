@@ -46,15 +46,15 @@
 
         <form class="profile__form flex">
           <div class="profile__form-left flex">
-            <label for="cat-name" class="text-bold profile__form-label">Имя:
+            <label for="cat-name" class="text-bold profile__form-label flex">Имя:&#160;<sup>*</sup>
               <input type="text" placeholder="Барсик" name="cat-name" id="cat-name" class="programs-input profile__form-input">
             </label>
 
-            <label for="cat-weight" class="text-bold profile__form-label">Вес (КГ):
+            <label for="cat-weight" class="text-bold profile__form-label flex">Вес&#160;(КГ):&#160;<sup>*</sup>
               <input type="text" placeholder="7" name="cat-weight" id="cat-weight" class="programs-input profile__form-input">
             </label>
 
-            <label for="cat-age" class="text-bold profile__form-label">Возраст (ЛЕТ):
+            <label for="cat-age" class="text-bold profile__form-label flex">Возраст&#160;(ЛЕТ):
               <input type="text" placeholder="7" name="cat-age" id="cat-age" class="programs-input profile__form-input">
             </label>
           </div>
@@ -81,15 +81,17 @@
 
     <section class="programs__contacts">
       <div class="container">
-        <h2 class="subtitle contacts__title">Контактные данные (владельца кота)</h2>
+        <h2 class="subtitle contacts__title title--green-line">Контактные данные (владельца кота)</h2>
 
         <form class="contacts__form flex">
-          <label for="e-mail" class="text-bold contacts__form-label">E-mail:
+          <label for="e-mail" class="text-bold contacts__form-label flex">E-mail:<sup>*</sup>
             <input type="text" placeholder="kuklachev@gmail.com" name="e-mail" id="e-mail" class="programs-input contacts__form-input">
+            <img src="img/form-mail.svg" alt="phone" width="17px" height="13px" class="contacts-label-email">
           </label>
 
-          <label for="phone" class="text-bold contacts__form-label">Телефон:
+          <label for="phone" class="text-bold contacts__form-label flex">Телефон:<sup>*</sup>
             <input type="text" placeholder="8 (960) 900-60-90" name="phone" id="phone" class="programs-input contacts__form-input">
+            <img src="img/form-phone.svg" alt="phone" width="20px" height="20px" class="contacts-label-phone">
           </label>
         </form>
       </section>
@@ -97,7 +99,7 @@
 
     <section class="programs__сomments">
       <div class="container">
-        <h2 class="subtitle сomments__title">Комментарии</h2>
+        <h2 class="subtitle сomments__title title--green-line">Комментарии</h2>
 
         <form class="сomments__form">
           <textarea name="" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота" class="сomments__form-textarea"></textarea>
@@ -107,7 +109,7 @@
 
     <section class="programs__extra">
       <div class="container">
-        <h2 class="subtitle extra__title">Дополнительно</h2>
+        <h2 class="subtitle extra__title title--green-line">Дополнительно</h2>
 
         <form class="extra__form flex">
           <div class="extra__checkbox-container">
@@ -131,7 +133,10 @@
           </div>
         </form>
 
-        <button class="button extra__button">Отправить заявку</button>
+        <div class="extra__bottom flex">
+          <button class="button extra__button">Отправить заявку</button>
+          <p class="text extra__bottom-text"><sup>*</sup> — Обязательные поля</p>
+        </div>
       </div>
     </section>
       

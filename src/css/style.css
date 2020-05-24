@@ -660,6 +660,21 @@ body {
   font-weight: normal;
   text-transform: uppercase; }
 
+.programs-input:hover {
+  border: 1px solid #cdcdcd; }
+
+.programs-input:active,
+.programs-input:focus {
+  border: 1px solid #444444; }
+
+.programs-input:invalid {
+  border: 1px solid #ff8282;
+  box-shadow: none; }
+
+.programs-input:invalid + .contacts-label-phone,
+.programs-input:invalid + .contacts-label-email {
+  fill: #ff8282; }
+
 .programs__profile {
   margin-bottom: 72px; }
 
@@ -722,6 +737,15 @@ body {
   top: -4px;
   left: -40px; }
 
+.profile__radio:hover + .profile__label-radio::before {
+  border: 1px solid #BCBCBC; }
+
+.profile__radio:focus + .profile__label-radio::before {
+  opacity: 0.5; }
+
+.profile__radio:active + .profile__label-radio::before {
+  opacity: 0.5; }
+
 .profile__radio:focus + .profile__label-radio::before,
 .profile__radio:checked + .profile__label-radio::before {
   content: '';
@@ -781,6 +805,13 @@ body {
   line-height: 28px;
   text-transform: uppercase; }
 
+.сomments__form-textarea:hover {
+  border: 1px solid #cdcdcd; }
+
+.сomments__form-textarea:active,
+.сomments__form-textarea:focus {
+  border: 1px solid #444444; }
+
 .programs__extra {
   margin-bottom: 80px; }
 
@@ -818,6 +849,15 @@ body {
 .extra__checkbox:checked + .extra__checkbox-label::before {
   content: '';
   background: url(../img/tick.png) center center no-repeat; }
+
+.extra__checkbox:hover + .extra__checkbox-label::before {
+  border: 1px solid #BCBCBC; }
+
+.extra__checkbox:focus + .extra__checkbox-label::before {
+  opacity: 0.5; }
+
+.extra__checkbox:active + .extra__checkbox-label::before {
+  opacity: 0.5; }
 
 .extra__bottom {
   align-items: center; }

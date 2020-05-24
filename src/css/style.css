@@ -1007,7 +1007,15 @@ body {
 @media screen and (max-width: 660px) {
   .subtitle {
     font-size: 24px; }
+  .logo {
+    width: 100%; }
   .header__list {
+    width: 100%;
+    display: none;
+    flex-direction: column; }
+  .header__list-item {
+    text-align: center; }
+  .text-bold--active::after {
     display: none; }
   .header__menu {
     display: block;

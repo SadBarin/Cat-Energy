@@ -208,7 +208,15 @@
   .header__list-item
     text-align: center
 
+  .header__text-bold
+    font-size: 20px
+
+    margin-bottom: 15px
+
   .text-bold--active::after
+    display: none
+
+  .text-bold--white-active::after
     display: none
 
   .header__menu
@@ -216,12 +224,14 @@
 
     cursor: pointer
 
-  .header__menu:hover
+  .header__menu:hover,
+  .header__list-close:hover
     opacity: 0.6
 
     transition: .2s ease-in
 
-  .header__menu:active, .header__menu:focus
+  .header__menu:active, .header__menu:focus,
+  .header__list-close:active, .header__list-close:focus
     opacity: 0.3
 
     transition: .2s ease-in

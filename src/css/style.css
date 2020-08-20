@@ -100,6 +100,7 @@ body {
   margin: 0; }
 
 .title--green-line {
+  overflow: hidden;
   position: relative;
   display: inline-flex;
   align-items: center; }
@@ -1228,6 +1229,8 @@ body {
     height: 300px; } }
 
 @media screen and (max-width: 430px) {
+  .text-bold {
+    font-size: 16px; }
   .advantages__container {
     margin-bottom: 40px; }
   .advantages__item {
@@ -1244,17 +1247,23 @@ body {
   .advantages__text {
     margin: 0;
     margin-left: 76px; }
-  .profile__form-label {
+  .profile__form-label,
+  .contacts__form-label {
     flex-direction: column;
     align-items: start;
     justify-content: start;
     position: relative; }
-  .profile__form-label sup {
+  .profile__form-label sup,
+  .contacts__form-label sup {
     position: absolute;
     left: 14%; }
-  .profile__form-label + .profile__form-label sup {
+  .profile__form-label + .profile__form-label sup,
+  .contacts__form-label + .contacts__form-label sup {
     left: 22%; }
-  .profile__form-input {
+  .contacts__form-label svg {
+    display: none; }
+  .profile__form-input,
+  .contacts__form-input {
     margin-left: 0;
     margin-top: 6px; }
   .map__address {

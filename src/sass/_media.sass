@@ -5,7 +5,7 @@
     &::after
       top: 480px
       left: 100px
-  
+
     &::before
       opacity: 0
       transition: 1s ease-in
@@ -31,7 +31,7 @@
     &::after
       background: url(../img/cat-slim-big.png) no-repeat
       background-size: contain
-      
+
       height: 206px
       width: 200px
 
@@ -114,7 +114,7 @@
   .profile__form-right
     width: 100%
     padding-top: 24px
-    padding-bottom: 24px 
+    padding-bottom: 24px
 
   .contacts__form
     flex-direction: column
@@ -172,10 +172,10 @@
   .card
     flex-basis: 47%
 
-  .main__additionally 
+  .main__additionally
     margin-bottom: 76px
 
-  .additionally__content 
+  .additionally__content
     flex-direction: column
 
   .additionally__content-left
@@ -249,12 +249,12 @@
       top: 390px
       left: 0
       right: 0
-  
+
     &::before
       background: url(../img/header-background-mobile.jpg) no-repeat
       background-size: cover
       opacity: 1
-      
+
       width: 100%
       height: 55%
 
@@ -286,7 +286,7 @@
     &::after
       background: url(../img/cat-slim-big.png) no-repeat
       background-size: contain
-      
+
       height: 55px
       width: 59px
 
@@ -319,7 +319,7 @@
     margin-right: 0px
 
   .map__address
-    padding: 30px 20px 
+    padding: 30px 20px
 
   .footer__container
     flex-direction: column
@@ -343,7 +343,7 @@
 
     flex-direction: column
 
-  .additionally__info 
+  .additionally__info
     width: 100%
 
   .additionally__button
@@ -395,11 +395,11 @@
       top: 290px
       left: 0
       right: 0
-  
+
     &::before
       background-position: center
       opacity: 1
-      
+
       width: 100%
       height: 60%
 
@@ -456,7 +456,7 @@
 
   .card:not(:last-child)
     margin-bottom: 50px
-    
+
     &::before
       content: ""
 
@@ -506,6 +506,9 @@
     height: 300px
 
 @media screen and (max-width:430px)
+  .text-bold 
+    font-size: 16px
+
   .advantages__container
     margin-bottom: 40px
 
@@ -529,21 +532,28 @@
     margin: 0
     margin-left: 76px
 
-  .profile__form-label 
+  .profile__form-label,
+  .contacts__form-label
     flex-direction: column
     align-items: start
     justify-content: start
 
     position: relative
 
-  .profile__form-label sup
+  .profile__form-label sup,
+  .contacts__form-label sup
     position: absolute
     left: 14%
 
-  .profile__form-label + .profile__form-label sup
+  .profile__form-label + .profile__form-label sup,
+  .contacts__form-label + .contacts__form-label sup
     left: 22%
 
-  .profile__form-input
+  .contacts__form-label svg 
+    display: none
+
+  .profile__form-input,
+  .contacts__form-input
     margin-left: 0
     margin-top: 6px
 

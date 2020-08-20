@@ -3,8 +3,6 @@ const gulp     = require('gulp'),
   cleanCSS     = require('gulp-clean-css'),
   autoprefixer = require('gulp-autoprefixer'),
   imagemin     = require('gulp-imagemin'),
-  uglify       = require('gulp-uglify'),
-  concat       = require('gulp-concat'),
   browserSync  = require('browser-sync').create(),
   sass         = require('gulp-sass'),
   watch        = require('gulp-watch');
@@ -30,14 +28,12 @@ gulp.task('minifyImage', () => {
     .pipe(gulp.dest('build/img'))
 });
 
-gulp.task('minifyScript', () => {
-  return gulp.src('script/*.js')
-    .pipe(concat('script.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('build/script'))
+gulp.task('script', () => {
+  return gulp.src('src/script/*.js')
+      .pipe(gulp.dest('build/script'));
 });
 
-gulp.task('minify', gulp.parallel('minifyHTML', 'minifyCSS', 'minifyImage', 'minifyScript'));
+gulp.task('minify', gulp.parallel('minifyHTML', 'minifyCSS', 'minifyImage', 'script'));
 
 gulp.task('exportFonts', () => {
   return gulp.src('src/fonts/*.*')

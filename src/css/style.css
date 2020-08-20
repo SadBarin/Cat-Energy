@@ -1244,6 +1244,19 @@ body {
   .advantages__text {
     margin: 0;
     margin-left: 76px; }
+  .profile__form-label {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    position: relative; }
+  .profile__form-label sup {
+    position: absolute;
+    left: 14%; }
+  .profile__form-label + .profile__form-label sup {
+    left: 22%; }
+  .profile__form-input {
+    margin-left: 0;
+    margin-top: 6px; }
   .map__address {
     flex-direction: column;
     justify-content: center; }
